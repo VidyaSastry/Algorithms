@@ -1,5 +1,6 @@
 import java.io.*;
 import java.util.*;
+
 class BubbleSort{
 
 	public static void main(String[] args){
@@ -17,7 +18,8 @@ class BubbleSort{
 				numbers[i] = numScanner.nextInt();
 			}
 		}
-		System.out.println("Enter\n 1 - Ascending Order \n 2 - Descending Order");
+
+		System.out.println("Select\n1 - Ascending Order \n2 - Descending Order");
 		int choice = s.nextInt();
 
 		switch(choice){
@@ -28,7 +30,6 @@ class BubbleSort{
 			default: System.out.println("Invalid choice");
 			break;
 		}
-
 	}
 
 	public void ascending(int numbers[],int count){
@@ -44,12 +45,26 @@ class BubbleSort{
 		}
 
 		System.out.println("The ordered numbers are: ");
-		for(int i = 0; i < count; i++){
+		for (int i = 0; i < count; i++){
 			System.out.println(numbers[i]);
 		} 		
 	}
 
 	public void descending(int numbers[],int count){
-		
+		int temp = 0;
+		for (int i = 0; i < count; i++){
+			for (int j = 1; j < count - i; j++){
+				if(numbers[j-1] < numbers[j]){
+					temp = numbers[j-1];
+					numbers[j-1] = numbers[j];
+					numbers[j] = temp;
+				}
+			}
+		}
+
+		System.out.println("The ordered numbers are: ");
+		for (int i = 0; i < count; i++){
+			System.out.println(numbers[i]);
+		} 
 	}
 }
