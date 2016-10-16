@@ -1,10 +1,10 @@
 import java.io.*;
 import java.util.*;
 
-class InsertionSort{
+class MergeSort{
 
 	public static void main(String[] args){
-		InsertionSort sort = new InsertionSort();
+		MergeSort sort = new MergeSort();
 		Scanner s = new Scanner(System.in);
 		System.out.println("Enter the number of elements");
 		int count = s.nextInt();
@@ -32,26 +32,11 @@ class InsertionSort{
 		}
 	}
 
-	public void ascending(int numbers[], int count){
-		int key;
-		for (int j = 1; j < count; j++){
-			key = numbers[j];
-			int i = j - 1;
-			while( i > 0 && numbers[i] > key){
-				numbers[i+1] = numbers[i];
-				i = i - 1;
-			}
-			numbers[i+1] = key;
-		}
-
-		System.out.println("The ordered numbers are: ");
-		for (int i = 0; i < count; i++){
-			System.out.println(numbers[i]);
-		}
+	public void ascending(int numbers[],int count){
 
 	}
 
 	public void descending(int numbers[], int count){
-
+		
 	}
 }
