@@ -37,7 +37,7 @@ class InsertionSort{
 		for (int j = 1; j < count; j++){
 			key = numbers[j];
 			int i = j - 1;
-			while( i > 0 && numbers[i] > key){
+			while( i >= 0 && numbers[i] > key){
 				numbers[i+1] = numbers[i];
 				i = i - 1;
 			}
@@ -52,6 +52,21 @@ class InsertionSort{
 	}
 
 	public void descending(int numbers[], int count){
+				int key;
+		for (int j = 1; j < count; j++){
+			key = numbers[j];
+			int i = j - 1;
+			while( i >= 0 && numbers[i] < key){
+				numbers[i+1] = numbers[i];
+				i = i - 1;
+			}
+			numbers[i+1] = key;
+		}
+
+		System.out.println("The ordered numbers are: ");
+		for (int i = 0; i < count; i++){
+			System.out.println(numbers[i]);
+		}
 
 	}
 }
