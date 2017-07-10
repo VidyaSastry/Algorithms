@@ -1,6 +1,6 @@
 # Algorithms
 
-Implementation of various algorithms in Java
+Implementation of various basic algorithms in Java
 
 SORTING
 
