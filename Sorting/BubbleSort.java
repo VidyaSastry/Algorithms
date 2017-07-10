@@ -1,6 +1,8 @@
 import java.io.*;
 import java.util.*;
 
+/* Bubble sort is used to sort numbers.*/
+
 class BubbleSort{
 
 	public static void main(String[] args){
